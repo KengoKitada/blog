@@ -1,0 +1,16 @@
+<div class="col-md-12">
+<p>
+ <b>タイトル：<%= @post.title %></b>
+</p>
+<p>カテゴリ：<%= @post.category %>
+<p>
+ <b>本文：<%= @post.body %></b>
+</p>
+
+<%= simple_format(@post.body) %>
+
+<%= link_to 'TOPへ戻る' , '/posts' %>
+<%= link_to '編集' , edit_post_path %>
+<%= link_to '削除' , post_path, :method => :delete, :confirm => '消して良いのか？' %>
+
+</div>

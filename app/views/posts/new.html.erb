@@ -1,0 +1,32 @@
+<div class"col-md-12">
+
+<h1>新規blog投稿じゃい</h1>
+
+<%= form_for @post, url: { action: :create } do |f| %>
+<div class="form-group">
+<p>
+<%= f.label"タイトル" %>
+<%= f.text_field :title,class: "form-control" %>
+</p>
+</div>
+
+<div class="form-group">
+<p>
+<%= f.label"本文"%>
+<%= f.text_area :body,class: "form-control" %>
+</p>
+</div>
+
+<div class="form-group">
+<p>
+<%= f.label"カテゴリ" %>
+<%= f.text_field :category,class: "form-control"%>
+</div>
+
+<%= f.submit '新規投稿'%>
+
+
+<% end %>
+</div>
+
+
